@@ -1,0 +1,176 @@
+.contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(234, 46, 46, 0.1);
+}
+
+.overlay{
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    
+    z-index: 100;
+}
+
+.overlay.activate{
+    visibility: visible;
+}
+
+.popup{
+    background: #f8f8f8;
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    width: 350px;
+    border-radius: 20px;
+    margin: 0;
+
+}
+/*-----Estilos para icono ce cierre-----*/
+.close-icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 22px;
+    padding: 10px 25px 10px 25px;
+    width: 300px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.icon-color{
+    color: rgb(164, 10, 10);
+}
+
+.icon-color:hover{
+    color: red;
+}
+
+/*----------------------------------*/
+
+body{
+    position: relative;
+}
+
+.container-modal{
+    position: absolute;
+    /* left: 35vw;
+    right: 35vw; */
+    bottom: 8%;
+    top: 8vh;
+    width: 350px;
+    height: 600px;
+}
+
+form{
+    border: 2px solid rgba(255,255,255,0.2);
+    padding: 70px 30px 30px 30px;
+    border-radius: 25px;
+    height: 510px;
+    backdrop-filter: blur(1px);
+    background: rgba(255,255,255,0.2);
+ }
+
+form .button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+    padding: auto;
+}
+
+.form-input-format{
+    border:1px solid rgb(117, 117, 241);
+    width: 100%;
+    height: 36px;
+    border-radius: 5px;
+}
+
+.form-color{
+    border-color: rgb(99, 99, 225);
+}
+
+form .title{
+    position: absolute;
+    top: 20px;
+    left: 28px;
+    width: 310px;
+    height: 90px;
+    color: white;
+}
+
+form .checkbox{
+    display: flex;
+    margin-left: 15px;
+}
+
+form .form-check-input{
+    margin-right: 20px;
+}
+
+.form-logo img{
+    width: 40px;
+    height: 40px;
+}
+
+.form-logo{
+    position: absolute;
+    top: 13px;
+    left: 23px;
+}
+
+strong{
+    font-size: 20px;
+}
+
+.btn-cerrar-popup{
+    position: absolute;
+    right: 10px;
+    top: 19px;
+    font-size: 25px;
+    color: red;
+    width: 40px;
+    height: 40px;
+    z-index: 10;
+}
+
+.separacion{
+    position: absolute;
+    bottom: 535px;
+    left: 14px;
+    width: 320px;
+    height: 40px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    border-bottom: 2px solid rgb(195, 195, 215);
+}
+
+@media screen and (max-width: 600px) {
+    .container-modal {
+        left: 15%;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .container-modal {
+        left: 23%;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .container-modal {
+        left: 35vw;
+    }
+}
+
+.form-input{
+    border: #f8f8f8;
+}
