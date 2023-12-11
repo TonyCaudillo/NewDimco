@@ -13,112 +13,114 @@
 
     <style>
 
-        *{
-            margin: 0;
-            padding: 0;
-        }
+* {
+    margin: 0;
+    padding: 0;
+}
 
-        body{
-            background-color: #a39090;
-            background-size: cover;
-            height: 100vh;
-        }
+body {
+    background-color: #a39090;
+    background-size: cover;
+    height: 100vh;
+}
 
-        .contenedor {
-            background-color: none;
-            height: 300px;
-            width: 300px;
-            margin: 140 px 0;
+.contenedorRedes {
+    background-color: blue;
+    /* height: 300px;
+    width: 300px;
+    margin: 140px 0; */
+}
 
-        }
+.redes {
+    margin-right: 0; /* Ajusta el margen a la derecha */
+    padding-right: 0; /* Ajusta el padding a la derecha */
+    /* width: 16%; */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Alinea los elementos a la derecha */
+    cursor: grab;
+    /* position: fixed; */
+}
 
-        ul{
-            margin-left: 0;
-            width: 70%;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            cursor: pointer;
-            position: fixed;
+.lista {
+    position: relative;
+    transform: translate(120px); /* Ajusta la traslación hacia la derecha */
+    list-style: none;
+    padding: 10px 0;
+    margin: 20px 0;
+    transition: .5s;
+    width: 170px;
+    border-radius: 200px; /* Bordes del color de fondo */
+}
 
-        }
+.lista:hover:nth-child(1) {
+    background: #21ce11;
+}
 
-        li {
-            position: relative;
-            transform: translate(-160px);
-            /* background: rgba(0, 0, 0, 0.8); */
-            list-style: none;
-            padding: 10px 0;
-            margin: 20px 0;
-            transition: .5s;
-            width: 170px;
-            border-radius: 200px 200px 200px 0;
-        }
+.lista:hover:nth-child(2) {
+    background: #ec0909;
+}
 
-        li:hover:nth-child(1) {
-            background: #21ce11;
-        }
+.lista:hover:nth-child(3) {
+    background: blueviolet;
+}
 
-        li:hover:nth-child(2) {
-            background: #ec0909;
-        }
+.lista:hover {
+    transform: translateX(0);
+}
 
-        li:hover:nth-child(3) {
-            background: blueviolet;
-        }
+.linkr {
+    font-weight: bold;
+    color: #fff;
+    font-family: sans-serif;
+    text-decoration: none;
+    padding-right: 10px; /* Ajusta el padding a la derecha */
+    text-align:right;
+}
 
-        li:hover {
-            transform: translateX(0);
-        }
+i {
+    margin-right: 15px; /* Ajusta el margen a la derecha */
+    padding: 10px 10px;
+    border-radius: 100%;
+    color: rgb(173, 143, 143);
+    background: #fff;
+}
 
-        a {
-            font-weight: bold;
-            color: #fff;
-            font-family: sans-serif;
-            text-decoration: none;
-            padding-left: 10px;
+.icon {
+    font-size: 20px;
+}
 
-        }
+.whatsapp {
+    position: relative;
+    right: 90px; /* Ajusta la posición hacia la derecha */
+    
+}
 
-        i {
-            margin-left: 15px;
-            padding: 10px 10px;
-            border-radius: 50%;
-            color: #000;
-            background: #fff;
-        }
+.correo {
+    position: relative;
+    right: 65px; /* Ajusta la posición hacia la derecha */
+}
 
-        .icon {
-            font-size: 20px;
-        }
+.telefono {
+    position: relative;
+    right: 75px; /* Ajusta la posición hacia la derecha */
+}
 
-        .whatsapp {
-            position: relative;
-            left: 30px;
-        }
 
-        .correo {
-            position: relative;
-            left: 55px;
-        }
 
-        .telefono {
-            position: relative;
-            left: 45px;
-        }
     </style>
 
     <title>Document</title>
 </head>
 
 <body>
-    <div class="contenedor">
-        <ul>
-            <li><a href="">whatsapp</a><i class="bi bi-whatsapp whatsapp whatsapp icon"></i></li>
-            <li><a href="">correo</a><i class="bi bi-envelope-fill envelope correo icon"></i></li>
-            <li><a href="">telefono</a><i class="bi bi-telephone-fill phone telefono icon"></i></li>
-        </ul>
+    <div class="contenedorRedes ">
+        <div class="redes">
+            <div class="lista"><a class="linkr" href="">whatsapp</a><i class="bi bi-whatsapp whatsapp whatsapp icon "></i></div>
+            <div class="lista"><a class="linkr" href="">correo</a><i class="bi bi-envelope-fill envelope correo icon"></i></div>
+            <div class="lista"><a class="linkr" href="">telefono</a><i class="bi bi-telephone-fill phone telefono icon"></i></div>
+        </div>
     </div>
 
 </body>

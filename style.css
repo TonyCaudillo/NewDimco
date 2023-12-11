@@ -1,4 +1,12 @@
 
+body {
+    background-image: url('img/DIMCO1.jpeg');
+    background-size: cover; /* Ajusta el tamaño de la imagen al tamaño del contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen en su posición mientras se desplaza la página */
+    /* Puedes agregar más propiedades según tus necesidades */
+}
 .navigation-body{
     background: url('img/DIMCO1.jpeg') rgba(0, 0, 0, 0.3);
     background-blend-mode: multiply;
@@ -58,21 +66,42 @@
     background-color: rgba(255,255,255,0.3);
     
    }
-   
-   .carousel-caption h5 {
-       font-size: 45px;
-       text-transform: uppercase;
-       letter-spacing: 2px;
-       margin-top: 25px;
-   }
+   .carousel-caption {
+    position: absolute;
+    right: auto; /* Elimina o reduce este valor si quieres que el texto se extienda hacia la derecha */
+    bottom: 50%; /* Aumenta este valor para mover el bloque de texto hacia arriba */
+    left: 15px;
+    z-index: 10;
+    color: #fff;
+    text-align: left;
+}
 
-.carousel-caption p {
-    width: 60%;
-    margin: auto;
-    font-size: 18px;
-    line-height: 1.9;
+.carousel-caption h1 {
+    font-weight: bold;
 
 }
+.carousel-caption p {
+    padding: 10px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.text-block2{
+background-color: rgba(0, 0, 0, 0.945);
+width: 200px;
+
+}
+
+
+
+
+/* Si necesitas ajustar la posición vertical del texto, puedes cambiar el margen superior del primer elemento h5 o p */
+.carousel-caption h5 {
+    margin-top: 100; /* Ajusta o elimina este valor según sea necesario */
+}
+
+   
+
 
 /* .carousel-inner::before{
     content: '';
@@ -130,28 +159,87 @@
 }
 
 
-
-
-.contact-icon i.whatsapp {
-    font-size: 20px; /* Ajusta el tamaño del icono según tus preferencias */
-    color: #4caf50; /* Verde para WhatsApp */
-    transition: color 0.3s ease-in-out;
+.contenedorRedes {
+    margin-top: 100px;
+    
+    /* height: 300px;
+    width: 300px;
+    margin: 140px 0; */
 }
 
-
-.contact-icon i.envelope {
-    font-size: 20px; /* Ajusta el tamaño del icono según tus preferencias */
-    color: #ff0000; /* Rojo para Correo */
-    transition: color 0.3s ease-in-out;
+.redes {
+    margin-right: 0; /* Ajusta el margen a la derecha */
+    padding-right: 0; /* Ajusta el padding a la derecha */
+    /* width: 16%; */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Alinea los elementos a la derecha */
+    cursor: grab;
+    /* position: fixed; */
 }
 
-.contact-icon i.phone {
-    font-size: 20px; /* Ajusta el tamaño del icono según tus preferencias */
-    color: #007bff; /* Azul para Teléfono */
-    transition: color 0.3s ease-in-out;
+.lista {
+    position: relative;
+    transform: translate(120px); /* Ajusta la traslación hacia la derecha */
+    list-style: none;
+    padding: 10px 0;
+    margin: 20px 0;
+    transition: .5s;
+    width: 170px;
+    border-radius: 200px; /* Bordes del color de fondo */
 }
 
+.lista:hover:nth-child(1) {
+    background: #21ce11;
+}
 
+.lista:hover:nth-child(2) {
+    background: #ec0909;
+}
+
+.lista:hover:nth-child(3) {
+    background: blueviolet;
+}
+
+.lista:hover {
+    transform: translateX(0);
+}
+
+.linkr {
+    font-weight: bold;
+    color: #fff;
+    font-family: sans-serif;
+    text-decoration: none;
+    padding-right: 10px; /* Ajusta el padding a la derecha */
+}
+
+i {
+    margin-right: 15px; /* Ajusta el margen a la derecha */
+    padding: 10px 10px;
+    border-radius: 100%;
+    color: #000;
+    background: #fff;
+}
+
+.icon {
+    font-size: 20px;
+}
+
+.whatsapp {
+    position: relative;
+    right: 90px; /* Ajusta la posición hacia la derecha */
+}
+
+.correo {
+    position: relative;
+    right: 65px; /* Ajusta la posición hacia la derecha */
+}
+
+.telefono {
+    position: relative;
+    right: 75px; /* Ajusta la posición hacia la derecha */
+}
 
 
 
@@ -181,148 +269,11 @@
     font-family: sans-serif;
 }
 
-.servicios-card{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: row;
-    max-height: 90wh;
-    min-height: 90vh;
-    flex-wrap: wrap;
-}
-
-.card{
-    position: relative;
-    width: 350px;
-    height: 450px;
-}
-
-section{
-    margin-top: 40px;
-    /* background-color: blueviolet; */
-}
-
-.sub-service{
-    text-align: center;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-} 
-/* .service h2{
-    display: inline-block;
-    position: relative;
-    font-size: 30px;
-    font-family: 'Dancing Script', cursive;
-} */
-
-.service .sub-service h2::after, h2::before{
-    content: '';
-    position: absolute;
-    width: 210%;
-    height: 3px;
-    background-color: black;
-    top: 0.6em;
-}
-
-.service .sub-service h2::before{
-    margin-top:10px;
-    left:-230%;
-}
-
-.service .sub-service h2::after{
-    margin-top:10px;
-    right:-230%;
-}
-
-.card .face{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: .5s;
-}
-
-.card .front{
-    transform: perspective(600px) rotateY(0deg);
-    box-shadow: 0 5px 10px #000;
-}
-
-
-.card .front img{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.card .front h3{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 45px;
-    line-height: 45px;
-    color: #fff;
-    background: rgba(0,0,0,0.4);
-    text-align: center;
-}
-
-/* Esta clase da estilo al card despues de rotar */
-.card .back{
-    transform: perspective(600px) rotateY(180deg);
-    background: rgb(255, 255, 255);
-    padding: 15px;
-    color: #000000;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    box-shadow: 0 5px 10px #000;
-}
-
-.card .back .link{
-    border-top: solid 1px #f3f3f3;
-    height: 50px;
-    line-height: 50px;
-}
-
-.card .back .link a{
-    color: #f3f3f3;
-}
-
-.card .back h3{
-    font-size: 30px;
-    margin-top: 20px;
-    letter-spacing: 2px;
-}
-
-.card .back p{
-    letter-spacing: 1px;
-    font-size: 14px;
-}
-
-.card:hover .front{
-    transform: perspective(600px) rotateY(180deg);
-    
-}
-
-.card:hover .back{
-    transform: perspective(600px) rotateY(360deg);
-}
 
 /* Estilos para pantallas pequeñas */
 @media (max-width: 600px) {
     /* Aplica estilos específicos para pantallas pequeñas */
-    .servicios-card {
-        flex-direction: column; /* Cambia la dirección de flex a columna */
-        align-items: center; /* Centra las tarjetas horizontalmente */
-    }
-
-    .card {
-        width: 90wh; /* Ajusta el ancho de las tarjetas al 90% del contenedor */
-        margin: 10px 0; /* Espacio entre las tarjetas en la columna */
-    }
+    
 }
 
 /* Estilos para pantallas medianas */
@@ -338,4 +289,12 @@ section{
     /* Aplica estilos específicos para pantallas grandes */
 }
 
-/*----------------------------------------------*/
+.slide{
+    position: relative;
+
+}
+
+.align-content{
+    position: absolute;
+    top: 110px;
+}
