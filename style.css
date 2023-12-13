@@ -1,4 +1,3 @@
-
 body {
     background-image: url('img/DIMCO1.jpeg');
     background-size: cover; /* Ajusta el tamaño de la imagen al tamaño del contenedor */
@@ -6,7 +5,21 @@ body {
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-attachment: fixed; /* Fija la imagen en su posición mientras se desplaza la página */
     /* Puedes agregar más propiedades según tus necesidades */
+    width: 100vw;/*1364*//*964*/
+    height: 100vh;
+    position: relative;
 }
+
+.desvanesido{
+    position: absolute;
+    background: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.3) 45%, rgba(0, 0, 0, 0.3) 55%, transparent 100%);
+    backdrop-filter: blur(6px);
+    width: 40vw;
+    min-width: 250px;
+    height: 87.7vh;
+    z-index: 1;
+}
+
 .navigation-body{
     background: url('img/DIMCO1.jpeg') rgba(0, 0, 0, 0.3);
     background-blend-mode: multiply;
@@ -14,14 +27,11 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    
 }
 
 .sign{
     background-color: #1706b1;
-
 }
-
 
 .navbar-nav li {
     position: relative;
@@ -71,7 +81,7 @@ body {
     right: auto; /* Elimina o reduce este valor si quieres que el texto se extienda hacia la derecha */
     bottom: 50%; /* Aumenta este valor para mover el bloque de texto hacia arriba */
     left: 15px;
-    z-index: 10;
+    z-index: 4;
     color: #fff;
     text-align: left;
 }
@@ -89,19 +99,12 @@ body {
 .text-block2{
 background-color: rgba(0, 0, 0, 0.945);
 width: 200px;
-
 }
-
-
-
 
 /* Si necesitas ajustar la posición vertical del texto, puedes cambiar el margen superior del primer elemento h5 o p */
 .carousel-caption h5 {
     margin-top: 100; /* Ajusta o elimina este valor según sea necesario */
 }
-
-   
-
 
 /* .carousel-inner::before{
     content: '';
@@ -113,8 +116,6 @@ width: 200px;
     background: rgb(0, 30, 82, 0.327);
     z-index: 1;
 } */
-
-
 /*Efecto de pulsacion al boton de solicitar*/
 @keyframes pulse {
     0% {
@@ -160,33 +161,33 @@ width: 200px;
 
 
 .contenedorRedes {
-    margin-top: 100px;
-    
+    position: absolute;
     /* height: 300px;
     width: 300px;
     margin: 140px 0; */
 }
 
 .redes {
-    margin-right: 0; /* Ajusta el margen a la derecha */
-    padding-right: 0; /* Ajusta el padding a la derecha */
+    display:grid;
+    justify-items: self-end;
+    align-content: end;
+    width: 100vw;
+    height: 250px;
     /* width: 16%; */
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end; /* Alinea los elementos a la derecha */
     cursor: grab;
     /* position: fixed; */
 }
 
 .lista {
+    transform: translate(130px); /* Ajusta la traslación hacia la derecha */
     position: relative;
-    transform: translate(120px); /* Ajusta la traslación hacia la derecha */
     list-style: none;
-    padding: 10px 0;
-    margin: 20px 0;
+    padding: 6px 0;
+    margin: 15px 20px;
     transition: .5s;
-    width: 170px;
+    width: 180px;
+    height: 42px;
     border-radius: 200px; /* Bordes del color de fondo */
 }
 
@@ -199,49 +200,64 @@ width: 200px;
 }
 
 .lista:hover:nth-child(3) {
-    background: blueviolet;
+    background:#1706b1;
 }
 
 .lista:hover {
     transform: translateX(0);
 }
 
-.linkr {
+.linkr{
+    position: relative;
+    left: 60px;
     font-weight: bold;
     color: #fff;
     font-family: sans-serif;
     text-decoration: none;
     padding-right: 10px; /* Ajusta el padding a la derecha */
+    visibility: hidden;
+    z-index: 100;
+}
+
+.linkr.activate{
+    visibility: visible;
 }
 
 i {
     margin-right: 15px; /* Ajusta el margen a la derecha */
-    padding: 10px 10px;
+    padding: 0px 10px;
     border-radius: 100%;
     color: #000;
-    background: #fff;
+    z-index: 100;
 }
 
 .icon {
     font-size: 20px;
+    padding: 7px 10px;
+    width: 100px;
+    height: 100px;
 }
 
 .whatsapp {
     position: relative;
     right: 90px; /* Ajusta la posición hacia la derecha */
+    color:#fff;
+    background-color: #21ce11;
 }
 
 .correo {
     position: relative;
     right: 65px; /* Ajusta la posición hacia la derecha */
+    color: #fff;
+    background-color: #ec0909;
 }
 
 .telefono {
     position: relative;
     right: 75px; /* Ajusta la posición hacia la derecha */
+    color: #fff;
+    background-color: #1706b1;
 }
-
-
 
 @media (max-width: 991px){
     .sidebar{
@@ -258,11 +274,7 @@ i {
 
 }
 
-
-
-@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
-
-*{
+*,::after::before{
     margin: 0;
     padding: 0;
     box-sizing: border-box;

@@ -8,31 +8,32 @@
 .overlay{
     background-color: rgba(0, 0, 0, 0.9);
     position: fixed;
+    width: 100vw;
+    height: 100vh;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     visibility: hidden;
-    
-    z-index: 100;
+    z-index: 6;
 }
 
-.overlay.activate{
+.overlay .activate-modal{
     visibility: visible;
 }
 
 .popup{
-    background: #f8f8f8;
+    position: relative;
     border-radius: 3px;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     width: 350px;
     border-radius: 20px;
     margin: 0;
-
+    z-index: 15;
 }
 /*-----Estilos para icono ce cierre-----*/
 .close-icon{
@@ -55,10 +56,6 @@
 
 /*----------------------------------*/
 
-body{
-    position: relative;
-}
-
 .container-modal{
     position: absolute;
     /* left: 35vw;
@@ -70,12 +67,12 @@ body{
 }
 
 form{
-    border: 2px solid rgba(255,255,255,0.2);
-    padding: 70px 30px 30px 30px;
+    padding: 80px 30px 20px 30px;
     border-radius: 25px;
-    height: 510px;
-    backdrop-filter: blur(1px);
-    background: rgba(255,255,255,0.2);
+    height: 450px;
+    backdrop-filter: blur(90px);
+    background: rgba(255, 255, 255, 0.2);
+    z-index: 20;
  }
 
 form .button{
@@ -85,6 +82,7 @@ form .button{
     justify-content: center;
     margin:auto;
     padding: auto;
+    cursor: pointer;
 }
 
 .form-input-format{
@@ -129,12 +127,13 @@ form .form-check-input{
 
 strong{
     font-size: 20px;
+    color: black;
 }
 
 .btn-cerrar-popup{
     position: absolute;
-    right: 10px;
-    top: 19px;
+    right: 15px;
+    top: 15px;
     font-size: 25px;
     color: red;
     width: 40px;
@@ -142,15 +141,20 @@ strong{
     z-index: 10;
 }
 
+.boton-abrir-popup{
+
+}
+
 .separacion{
     position: absolute;
-    bottom: 535px;
-    left: 14px;
+    bottom: 375px;
+    left: 15px;
     width: 320px;
     height: 40px;
     border-top-right-radius: 25px;
     border-top-left-radius: 25px;
-    border-bottom: 2px solid rgb(195, 195, 215);
+    border-bottom: 2px solid rgb(125, 125, 160);
+    z-index: 6;
 }
 
 @media screen and (max-width: 600px) {
@@ -169,8 +173,4 @@ strong{
     .container-modal {
         left: 35vw;
     }
-}
-
-.form-input{
-    border: #f8f8f8;
 }
